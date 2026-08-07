@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="STEP UP ENGLISH — Oktay Emin ile kişiselleştirilmiş İngilizce öğrenme deneyimi. Seviye belirleme, kişisel çalışma programı, konuşma pratiği ve birebir İngilizce dersleri.">
+<title>STEP UP ENGLISH — İngilizceni bir üst seviyeye taşı</title>
+<style>
+:root{
+ --bg:#f7f9fc;--text:#0c1118;--muted:#66707d;--card:#fff;--blue:#2457ff;
+ --blue2:#dfe7ff;--blue3:#eff3ff;--black:#0c1118;--line:#e4e8ef;
+ --radius:24px;--max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:15px 0;background:rgba(247,249,252,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(228,232,239,.75)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.055em;font-size:18px}
+.brand-mark{width:34px;height:34px;border-radius:11px;background:#111820;color:#fff;display:grid;place-items:center;position:relative;overflow:hidden}
+.brand-mark svg{width:22px;height:22px;position:relative;z-index:2}
+.brand-mark:after{content:"";position:absolute;width:25px;height:25px;border-radius:50%;background:var(--blue);right:-9px;top:-10px}
+.brand span{color:var(--blue)}
+.links{display:flex;gap:21px;font-size:11px;font-weight:850;align-items:center}
+.links a{display:flex;gap:6px;align-items:center;color:#414954;transition:.2s}
+.links a:hover{color:var(--blue)}
+.nav-icon{width:15px;height:15px;display:inline-grid;place-items:center;color:var(--blue)}
+.nav-btn{background:#111820;color:#fff;padding:11px 16px;border-radius:999px;font-size:11px;font-weight:850}
+.mobile-toggle{display:none;border:0;background:none;font-size:22px}
+.hero{min-height:94vh;display:grid;place-items:center;padding:145px 0 85px;overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--blue2);right:-160px;top:90px;filter:blur(8px);opacity:.7}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2}
+.kicker{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:11px;font-weight:850;margin-bottom:22px;box-shadow:0 8px 30px rgba(18,32,55,.05)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--blue3)}
+h1{font-size:clamp(57px,8vw,102px);line-height:.88;letter-spacing:-.078em;max-width:790px}
+h1 em{font-style:normal;color:var(--blue)}
+.hero p{font-size:18px;color:var(--muted);max-width:570px;margin:28px 0}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 20px;border-radius:999px;font-weight:850;font-size:12px;border:1px solid #111820;cursor:pointer}
+.btn.primary{background:#111820;color:#fff}.btn.primary:hover{background:var(--blue);border-color:var(--blue)}
+.btn.secondary{background:transparent}.btn.secondary:hover{background:#fff}
+.hero-card{height:470px;border-radius:36px;background:#111820;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:28px;color:white;box-shadow:0 25px 70px rgba(14,25,45,.16)}
+.hero-card:before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:var(--blue);right:-75px;top:-90px}
+.hero-card:after{content:"ENGLISH";position:absolute;left:-18px;top:70px;font-size:90px;font-weight:950;letter-spacing:-.08em;color:rgba(255,255,255,.055);transform:rotate(90deg)}
+.placeholder{position:absolute;inset:30px 30px 95px;border:1px dashed rgba(255,255,255,.23);border-radius:28px;display:grid;place-items:center;text-align:center;padding:30px;z-index:2}
+.placeholder strong{font-size:23px}.placeholder small{color:#b9c0ca}
+.hero-label{position:relative;z-index:3}.hero-label small{color:#b9c0ca;font-size:11px}.hero-label h3{font-size:26px;margin-top:3px}
+.motto{padding:45px 0;background:#111820;color:#fff;overflow:hidden}
+.motto-line{display:flex;gap:45px;align-items:center;white-space:nowrap;font-size:clamp(28px,4vw,55px);font-weight:900;letter-spacing:-.055em}
+.motto-line .blue{color:#7f9aff}.arrow-word{color:#7f9aff}
+section{padding:110px 0}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:46px}
+.eyebrow{font-size:11px;letter-spacing:.14em;font-weight:900;color:var(--blue);text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(40px,6vw,72px);letter-spacing:-.065em;line-height:.95}
+.lead{max-width:500px;color:var(--muted);font-size:17px}
+.intro{border-top:1px solid var(--line)}
+.intro-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px}
+.big-quote{font-size:clamp(30px,4vw,50px);letter-spacing:-.05em;line-height:1.02;font-weight:850}
+.copy{color:var(--muted);font-size:17px}.copy p+p{margin-top:18px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.stat b{font-size:28px}.stat span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.services{background:#111820;color:#fff}
+.services .eyebrow{color:#8ea3ff}.services .lead{color:#aeb6c1}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.service{border:1px solid #29303a;border-radius:24px;padding:30px;min-height:245px;transition:.25s;background:linear-gradient(145deg,#111820,#0d1218)}
+.service:hover{transform:translateY(-5px);border-color:#485363;box-shadow:0 20px 45px rgba(0,0,0,.2)}
+.service-num{font-size:12px;color:#8ea3ff;font-weight:900}.service h3{font-size:28px;letter-spacing:-.04em;margin:38px 0 10px}.service p{color:#aeb6c1}
+.process{background:#fff}
+.process-note{background:var(--blue3);border:1px solid #cfd9ff;border-radius:22px;padding:22px 25px;margin-bottom:35px;display:flex;gap:15px;align-items:flex-start}
+.process-note b{color:var(--blue)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{padding:24px;border-top:2px solid #111820}.step b{font-size:12px;color:var(--blue)}.step h3{margin:28px 0 8px;font-size:21px}.step p{color:var(--muted);font-size:14px}
+.why{background:#e9eeff}
+.pill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pill{background:#fff;border-radius:22px;padding:30px;border:1px solid #e0e6f3}.pill h3{font-size:22px;margin-bottom:10px}.pill p{color:var(--muted)}
+.ai-section{background:linear-gradient(135deg,#eef3ff,#fff);border-top:1px solid #dfe6fa;border-bottom:1px solid #dfe6fa}
+.ai-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;align-items:start}
+.ai-copy h2{margin-bottom:20px}.ai-copy p{color:var(--muted);font-size:17px}
+.ai-badge{display:inline-flex;align-items:center;gap:8px;background:#111820;color:#fff;padding:9px 13px;border-radius:999px;font-size:11px;font-weight:850;margin-bottom:20px}
+.ai-dot{width:7px;height:7px;background:#7f9aff;border-radius:50%}
+.planner{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 20px 55px rgba(23,43,79,.08)}
+.progress{height:7px;background:#e8ecf2;border-radius:99px;overflow:hidden;margin-bottom:25px}.progress span{display:block;height:100%;background:var(--blue);width:25%;transition:.35s}
+.ai-step{display:none}.ai-step.active{display:block}
+.ai-step h3{font-size:25px;letter-spacing:-.04em;margin-bottom:7px}.ai-step>p{color:var(--muted);font-size:14px;margin-bottom:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:13px}.field label{font-size:11px;font-weight:850;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:13px;background:#fbfcfe;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue3)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid var(--line);padding:9px 12px;border-radius:999px;font-size:12px;cursor:pointer;background:#fff}.chip.selected{background:var(--blue);color:#fff;border-color:var(--blue)}
+.ai-actions{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+.result{display:none}.result.active{display:block}
+.plan-top{background:#111820;color:#fff;border-radius:19px;padding:22px;margin-bottom:14px}.plan-top h3{font-size:26px}.plan-top p{color:#bdc4cd;font-size:13px;margin-top:4px}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.plan-card{border:1px solid var(--line);border-radius:18px;padding:19px}.plan-card h4{margin-bottom:8px}.plan-card p,.plan-card li{font-size:13px;color:var(--muted)}.plan-card ul{padding-left:18px}.plan-card li+li{margin-top:5px}
+.cta-after{background:var(--blue);color:#fff;border-radius:22px;padding:22px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta-after p{font-size:13px;color:#dfe7ff}.cta-after .btn{background:#fff;color:#111820;border-color:#fff}
+.social{background:#111820;color:#fff}.social .lead{color:#aeb6c1}.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.social-card{height:160px;border:1px solid #29303a;border-radius:22px;display:grid;place-items:center;transition:.2s;position:relative}.social-card:hover{background:#1a212b;border-color:#465160;transform:translateY(-4px)}.social-card svg{width:55px;height:55px}.social-card small{position:absolute;bottom:16px;color:#9da6b2;font-size:10px;letter-spacing:.08em}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.contact-info p{color:var(--muted);margin-top:18px;max-width:420px}.contact-links{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}.contact-links a{padding:10px 14px;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:850}
+form{background:#fff;border:1px solid var(--line);padding:30px;border-radius:25px;display:grid;gap:14px}
+textarea{min-height:130px;resize:vertical}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-size:11px;font-weight:900;margin-bottom:6px;display:block}
+footer{padding:35px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.chat-toggle{position:fixed;right:22px;bottom:22px;z-index:80;width:60px;height:60px;border-radius:50%;border:0;background:var(--blue);color:#fff;display:grid;place-items:center;box-shadow:0 15px 35px rgba(36,87,255,.35);cursor:pointer}
+.chat-toggle svg{width:25px}
+.chat-box{position:fixed;right:22px;bottom:92px;width:min(390px,calc(100vw - 30px));z-index:79;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 25px 70px rgba(12,24,44,.2);overflow:hidden;display:none}
+.chat-box.open{display:block;animation:pop .2s ease}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.chat-head{background:#111820;color:#fff;padding:17px 18px;display:flex;justify-content:space-between;align-items:center}.chat-head b{font-size:13px}.chat-head small{display:block;color:#aeb6c1;font-size:10px;margin-top:2px}.chat-close{background:none;border:0;color:#fff;font-size:20px;cursor:pointer}
+.chat-messages{height:290px;padding:15px;overflow:auto;background:#f7f9fc}.bubble{max-width:86%;padding:10px 12px;border-radius:14px;font-size:12px;margin-bottom:9px}.bot{background:#fff;border:1px solid var(--line)}.user{background:var(--blue);color:#fff;margin-left:auto}
+.chat-input{display:flex;padding:10px;border-top:1px solid var(--line);gap:7px}.chat-input input{padding:10px}.chat-input button{width:42px;border:0;border-radius:12px;background:var(--blue);color:#fff;cursor:pointer}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){.links,.nav-btn{display:none}.mobile-toggle{display:block}.hero-grid,.intro-grid,.ai-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:125px}.hero-card{height:390px}.service-grid,.reviews{grid-template-columns:1fr}.process-grid{grid-template-columns:repeat(2,1fr)}.pill-grid,.social-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.lead{margin-top:20px}}
+@media(max-width:560px){.container{width:min(var(--max),calc(100% - 28px))}section{padding:80px 0}.hero{min-height:auto}.hero-card{height:350px}.stats,.process-grid,.pill-grid,.social-grid,.form-grid,.plan-grid{grid-template-columns:1fr}h1{font-size:58px}.footer-inner{display:block}.footer-inner div+div{margin-top:10px}.motto-line{font-size:30px}.chat-box{right:15px;bottom:88px}}
+
+/* STEP UP ENGLISH brand refresh */
+.brand-logo{width:46px;height:46px;object-fit:contain;border-radius:10px;background:#fff;display:block}
+.brand{gap:11px}
+.brand-name{display:flex;flex-direction:column;line-height:.9}
+.brand-name strong{font-size:18px;letter-spacing:-.06em}
+.brand-name span{font-size:8px;letter-spacing:.34em;color:#111820!important;margin-top:4px}
+.nav-icon svg{width:15px;height:15px;stroke:currentColor}
+.service-icon{width:46px;height:46px;border-radius:14px;background:#18212c;border:1px solid #303946;display:grid;place-items:center;color:#8ea3ff}
+.service-icon svg{width:23px;height:23px;stroke:currentColor}
+.service{position:relative}
+.service-top{display:flex;justify-content:space-between;align-items:center}
+.brand-banner{padding:34px 0 0;background:var(--bg)}
+.brand-banner-card{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line);background:#fff;box-shadow:0 18px 50px rgba(18,32,55,.08)}
+.brand-banner-card img{display:block;width:100%;height:auto}
+.brand-banner-note{padding:14px 18px;font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:15px}
+.motto-line{white-space:normal;line-height:1.05}
+.motto-line .rhyme{color:#fff}
+@media (max-width:760px){
+ .brand-logo{width:40px;height:40px}
+ .brand-name strong{font-size:16px}
+ .brand-name span{font-size:7px}
+ .brand-banner{padding-top:20px}
+ .brand-banner-note{flex-direction:column}
+}
+
+
+.about-motivation{padding:18px 20px;margin-top:18px;background:#f1f4ff;border-left:3px solid var(--blue);border-radius:0 16px 16px 0}
+.service p{font-size:14px;line-height:1.8}
+.service p strong{color:#17233b}
+.planner-preview{background:#111820;color:#fff;border-radius:28px;padding:24px;display:grid;gap:10px;box-shadow:0 25px 70px rgba(14,25,45,.12)}
+.preview-step{display:flex;gap:15px;align-items:flex-start;padding:18px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(255,255,255,.035)}
+.preview-step>span{width:34px;height:34px;border-radius:10px;background:#2457ff;display:grid;place-items:center;font-size:11px;font-weight:900;flex:none}
+.preview-step b{display:block;font-size:14px}
+.preview-step small{display:block;color:#aeb7c4;margin-top:3px;font-size:12px;line-height:1.5}
+
+
+.meet-you{padding:85px 0;background:#eef3ff}
+.meet-you-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.meet-you h2{font-size:clamp(34px,5vw,58px);line-height:.98;letter-spacing:-.06em;margin:8px 0 18px}
+.meet-you h2 span{color:var(--blue)}
+.meet-you p{max-width:650px;color:#626c79;font-size:15px;line-height:1.75}
+.meet-you .btn{flex:none}
+@media(max-width:760px){.meet-you-inner{flex-direction:column;align-items:flex-start}.meet-you .btn{width:100%}}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav-inner">
+<a class="brand" href="#home" aria-label="STEP UP ENGLISH ana sayfa">
+<img class="brand-logo" src="assets/step-up-logo.png" alt="STEP UP ENGLISH logo">
+<div class="brand-name"><strong>STEP UP</strong><span>ENGLISH</span></div>
+</a>
+<div class="links">
+<a href="#home"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span> ANA SAYFA</a>
+<a href="#about"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c.8-3.4 3.2-5 7-5s6.2 1.6 7 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span> HAKKIMDA</a>
+<a href="#services"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M5 19V9h4v10M10 19V5h4v14M15 19v-7h4v7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span> HİZMETLER</a>
+<a href="#process"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M10 5h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span> PROSEDÜR</a>
+<a href="planner.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 20c.6-3.4 2.4-5.2 5.5-5.2s4.9 1.8 5.5 5.2M15 8h6M18 5v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span> SENİ TANIYALIM</a>
+<a href="#socials"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 18a4 4 0 1 1 3-6.7A5 5 0 1 1 17 18H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span> SOSYAL</a>
+<a href="#contact"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span> İLETİŞİM</a>
+</div>
+<a class="nav-btn" href="planner.html">PLANINI OLUŞTUR →</a>
+<button class="mobile-toggle" aria-label="Menü">☰</button>
+</div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div class="reveal">
+<div class="kicker"><span class="dot"></span> KİŞİSELLEŞTİRİLMİŞ İNGİLİZCE EĞİTİMİ</div>
+<h1>İngilizceni <br><em>geliştir, dünyanı değiştir.</em></h1>
+<p>Hedeflerine, ilgi alanlarına ve öğrenme hızına göre şekillenen kişisel bir İngilizce deneyimi. Seviyeni belirle, planını oluştur ve kendi hızında ilerle.</p>
+<div class="actions"><a class="btn primary" href="#process">ÖĞRENMEYE BAŞLA →</a><a class="btn secondary" href="#about">OKTAY'I TANI</a></div>
+</div>
+<div class="hero-card reveal">
+<div class="placeholder"><div><strong>Fotoğrafın burada olacak.</strong><br><small>Profesyonel fotoğrafını daha sonra ekleyebiliriz.</small></div></div>
+<div class="hero-label"><small>İNGİLİZCE ÖĞRETMENİ</small><h3>Oktay Emin</h3></div>
+</div>
+</div>
+</section>
+
+<div class="motto">
+<div class="container">
+<div class="motto-line"><span class="rhyme">İngilizceni <span class="blue">geliştir, dünyanı değiştir.</span></span> <span class="arrow-word">↗ STEP UP.</span></div>
+</div>
+</div>
+
+<section class="brand-banner" aria-label="STEP UP ENGLISH marka görseli">
+<div class="container">
+<div class="brand-banner-card reveal">
+<img src="assets/step-up-banner.png" alt="STEP UP ENGLISH eğitim hizmetleri bannerı">
+<div class="brand-banner-note"><span>İngilizce öğrenme yolculuğunda seviyeni belirle, programını oluştur ve ilerlemeye başla.</span><strong>STEP UP ENGLISH</strong></div>
+</div>
+</div>
+</section>
+
+<section class="intro" id="about">
+<div class="container intro-grid">
+<div class="reveal">
+<div class="eyebrow">01 / HAKKIMDA</div>
+<div class="big-quote">İngilizce bir ders değil. <span>Hayatında kullanabileceğin bir beceri.</span></div>
+</div>
+<div class="reveal">
+<div class="copy">
+<p>Ben Oktay, İngilizce öğretmeniyim.</p>
+<p>İngilizce öğrenirken en önemli şeyin yalnızca daha fazla kelime veya daha fazla gramer çalışmak olmadığına inanıyorum. Önemli olan, öğrendiğin İngilizceyi <strong>gerçekten kullanabileceğin bir sisteme dönüştürmek.</strong></p>
+<p>Bu yüzden dersleri ve çalışma planlarını hazır kalıplara göre değil; seviyene, hedeflerine, günlük hayatına, ilgi alanlarına ve öğrenmeye ayırabileceğin zamana göre şekillendiriyorum.</p>
+<p><strong>Kendini başkalarıyla kıyaslama. Nereden başladığın değil, bugün dünden ne kadar ileride olduğun önemli.</strong></p>
+<p>İster konuşurken daha rahat olmak, ister iş hayatında İngilizceni kullanmak, ister seyahatlerde kendine güvenmek iste; doğru plan ve düzenli çalışma ile gelişimini somut şekilde görebilirsin.</p>
+<p class="about-motivation">Mükemmel İngilizceyi beklemek zorunda değilsin. <strong>Önce başla, sonra geliştir, sonunda İngilizceyi hayatının doğal bir parçası haline getir.</strong></p>
+</div>
+<div class="stats">
+<div class="stat"><b>1:1</b><span>KİŞİSEL DERSLER</span></div>
+<div class="stat"><b>AI</b><span>KİŞİSEL PLANLAMA</span></div>
+<div class="stat"><b>SEN</b><span>MERKEZDE</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-head reveal">
+<div><div class="eyebrow">02 / HİZMETLER</div><h2>STEP UP<br>ENGLISH HİZMETLERİ</h2></div>
+<p class="lead">İhtiyacını belirliyor, seviyeni tanıyor ve İngilizce öğrenme sürecini sana uygun şekilde planlıyoruz.</p>
+</div>
+<div class="service-grid">
+<article class="service reveal">
+<div class="service-top"><span class="service-num">01</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c.8-3.6 3.1-5.3 7-5.3s6.2 1.7 7 5.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+<h3>Özel Ders</h3>
+<p>İhtiyacına göre planlanan birebir İngilizce dersleriyle birlikte çalışıyoruz. Dersler <strong>1 saat veya 2 saatlik</strong> seçeneklerle, seviyene ve hedeflerine göre şekillendirilebilir. Konuşma, kelime, dil bilgisi, dinleme, yazma veya günlük İngilizce gibi alanlardan hangisine ihtiyacın varsa dersin odağını ona göre belirliyoruz.</p>
+</article>
+<article class="service reveal">
+<div class="service-top"><span class="service-num">02</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19V9M10 19V5M15 19v-7M20 19V3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+<h3>Seviye Belirleme</h3>
+<p>İngilizce seviyeni yalnızca kendi tahminine bırakmıyoruz. <strong>Yapay zeka destekli seviye belirleme sistemi</strong> ile mevcut seviyeni anlamaya, güçlü olduğun alanları ve geliştirmen gereken becerileri ortaya çıkarmaya çalışıyoruz. Böylece çalışmaya rastgele bir noktadan değil, sana uygun başlangıç seviyesinden başlıyoruz.</p>
+</article>
+<article class="service reveal">
+<div class="service-top"><span class="service-num">03</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v4M16 3v4M4 10h16M8 14h3M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+<h3>Kişisel Öğrenme Programı</h3>
+<p>Seviyen, hedeflerin, ilgi alanların, günlük ayırabileceğin süre ve geliştirmek istediğin beceriler bir araya getirilerek <strong>yapay zeka destekli kişisel bir İngilizce öğrenme programı</strong> oluşturulur. Programın yanında alternatif çalışma rutinleri, sana uygun içerik fikirleri ve kullanabileceğin kaynaklar da önerilir.</p>
+</article>
+<article class="service reveal">
+<div class="service-top"><span class="service-num">04</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6 17.5A3.5 3.5 0 0 1 2.5 14V8A3.5 3.5 0 0 1 6 4.5h12A3.5 3.5 0 0 1 21.5 8v6a3.5 3.5 0 0 1-3.5 3.5H11l-4.5 3v-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 10h.01M12 10h.01M16 10h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div></div>
+<h3>Konuşma Pratiği</h3>
+<p>Konuşma pratiğini yalnızca soru-cevap şeklinde bırakmıyoruz. Seviyene uygun günlük hayat konuları, ilgi alanların ve gerçek iletişim senaryoları üzerinden konuşuyor; kelime dağarcığını, akıcılığını ve cümle kurma güvenini geliştiriyoruz. Ders sırasında verilen geri bildirimlerle hangi noktaları geliştirmen gerektiğini de netleştiriyoruz.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section class="process" id="process">
+<div class="container">
+<div class="section-head reveal"><div><div class="eyebrow">03 / PROSEDÜR</div><h2>Nasıl ilerliyoruz?</h2></div><p class="lead">Senden beklediğim ilk şey öğretmen seçmek değil. Önce kendini ve seviyeni tanımak.</p></div>
+<div class="process-note reveal"><b>ÖNEMLİ →</b><span>Önce <strong>seviye belirleme testi</strong> ile başla. Ardından kişisel AI planlayıcımız sana özel bir çalışma rotası, materyal ve kaynak önerileri hazırlasın. Son adımda istersen benimle iletişime geç.</span></div>
+<div class="process-grid">
+<div class="step reveal"><b>01</b><h3>Seviyeni belirle</h3><p>Kısa seviye belirleme testini tamamla ve mevcut seviyeni öğren.</p></div>
+<div class="step reveal"><b>02</b><h3>Seni tanıyalım</h3><p>Hobilerini, hedeflerini, günlük ayırabileceğin zamanı ve geliştirmek istediğin becerileri seç.</p></div>
+<div class="step reveal"><b>03</b><h3>Planını oluştur</h3><p>Profiline göre kişisel çalışma programın, alternatif rutinlerin ve kaynakların ortaya çıksın.</p></div>
+<div class="step reveal"><b>04</b><h3>Öğretmeninle buluş</h3><p>Hazır bir planla iletişime geç ve sana uygun birebir eğitim sürecini başlat.</p></div>
+</div>
+<div style="text-align:center;margin-top:35px"><a class="btn primary" href="planner.html">KİŞİSEL PLANIMI OLUŞTUR →</a></div>
+</div>
+</section>
+
+<section class="why">
+<div class="container">
+<div class="section-head reveal"><div><div class="eyebrow">04 / NEDEN KİŞİSELLEŞTİRİLMİŞ?</div><h2>Bir öğrenci<br>≠ başka bir öğrenci.</h2></div><p class="lead">Herkese aynı programı vermek yerine seni tanıyor, neye ihtiyacın olduğunu buluyor ve öğrenme yolunu buna göre tasarlıyoruz.</p></div>
+<div class="pill-grid">
+<div class="pill reveal"><h3>Senin Seviyen</h3><p>Dersler kitapta yazan seviyeye göre değil, gerçekten bulunduğun seviyeye göre başlar.</p></div>
+<div class="pill reveal"><h3>Senin Hedeflerin</h3><p>Konuşma, sınav, iş, seyahat, günlük hayat veya özgüven… Önceliği sen belirlersin.</p></div>
+<div class="pill reveal"><h3>Senin İlgi Alanların</h3><p>Film, müzik, oyun, spor, teknoloji, seyahat… Sevdiğin şeyleri İngilizce öğrenmenin yakıtına dönüştürürüz.</p></div>
+</div>
+</div>
+</section>
+
+<section class="meet-you" id="meet-you">
+<div class="container meet-you-inner">
+<div>
+<div class="eyebrow">KENDİNE UYGUN YOLDAN BAŞLA</div>
+<h2>Seni tanıyalım.<br><span>Sonra sana uygun yolu birlikte çizelim.</span></h2>
+<p>İngilizce hedeflerini, ilgi alanlarını, seviyeni ve günlük çalışma düzenini birkaç adımda paylaş. Sana özel planlama sürecini başlatalım.</p>
+</div>
+<a class="btn primary" href="planner.html">SENİ TANIYALIM →</a>
+</div>
+</section>
+<section class="ai-section" id="planner">
+<div class="container ai-grid">
+<div class="ai-copy reveal">
+<div class="ai-badge"><span class="ai-dot"></span> AI DESTEKLİ KİŞİSEL PLANLAYICI</div>
+<h2>Programını sana göre oluşturalım.</h2>
+<p>Seviyeni, ilgi alanlarını, hedeflerini, günlük ayırabileceğin zamanı ve öğrenme tercihlerini adım adım belirle. Sonrasında sana uygun bir İngilizce çalışma yol haritası oluştur.</p>
+<p style="margin-top:15px">Bu süreç artık ana sayfadan ayrı, daha detaylı bir planlama sayfasında ilerliyor.</p>
+<a class="btn primary" href="planner.html" style="margin-top:20px">KİŞİSEL PLANIMI OLUŞTUR →</a>
+</div>
+<div class="planner-preview reveal">
+<div class="preview-step"><span>01</span><div><b>Seviyeni belirle</b><small>Mevcut İngilizce seviyeni ve ihtiyaçlarını tanımla.</small></div></div>
+<div class="preview-step"><span>02</span><div><b>İlgi alanlarını seç</b><small>Sana ilham veren konuları ve içerikleri belirle.</small></div></div>
+<div class="preview-step"><span>03</span><div><b>Seni tanıyalım</b><small>Hedeflerini, zamanını ve öğrenme tercihlerini paylaş.</small></div></div>
+<div class="preview-step"><span>04</span><div><b>Planını al</b><small>Kişiselleştirilmiş çalışma yol haritana ulaş.</small></div></div>
+</div>
+</div>
+</section>
+
+<section class="social" id="socials">
+<div class="container">
+<div class="section-head reveal"><div><div class="eyebrow">05 / SOSYAL MEDYA</div><h2>Bağlantıda<br>kalalım.</h2></div><p class="lead">İngilizce içerikleri, öğrenme fikirleri ve güncel paylaşımlar için sosyal hesaplarımı takip edebilirsin.</p></div>
+<div class="social-grid">
+<a class="social-card reveal" href="#" onclick="return false" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.7"/><circle cx="17.4" cy="6.7" r="1" fill="white"/></svg><small>INSTAGRAM</small></a>
+<a class="social-card reveal" href="#" onclick="return false" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="2.7" y="5.5" width="18.6" height="13" rx="4" stroke="white" stroke-width="1.7"/><path d="m10 9 5 3-5 3V9Z" fill="white"/></svg><small>YOUTUBE</small></a>
+<a class="social-card reveal" href="#" onclick="return false" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M14 4v10.2a3.8 3.8 0 1 1-3.8-3.8" stroke="white" stroke-width="1.8" stroke-linecap="round"/><path d="M14 4c.6 2.4 2 3.7 4.2 4" stroke="#7f9aff" stroke-width="1.8" stroke-linecap="round"/></svg><small>TIKTOK</small></a>
+<a class="social-card reveal" href="#" onclick="return false" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="white" stroke-width="1.7"/><path d="M7 10v7M7 7.2v.1M11 17v-4.2a2.8 2.8 0 0 1 5.6 0V17M11 10v7" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg><small>LINKEDIN</small></a>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact-grid">
+<div class="contact-info reveal"><div class="eyebrow">06 / İLETİŞİM</div><h2>İngilizceni geliştirmeye hazır mısın?</h2><p>Önce kişisel planını oluştur. Sonra hazırladığın planla birlikte bana ulaş ve sana uygun eğitim sürecini konuşalım.</p><div class="contact-links"><a href="#" onclick="return false">E-POSTA →</a><a href="#" onclick="return false">WHATSAPP →</a><a href="#" onclick="return false">INSTAGRAM →</a></div></div>
+<form onsubmit="event.preventDefault();alert('Bu form şimdilik demo olarak çalışıyor. E-posta ve WhatsApp bilgilerin eklendiğinde gerçek iletişim akışına bağlayacağız.');">
+<div class="form-row"><div><label>AD SOYAD</label><input required placeholder="Adınız Soyadınız"></div><div><label>E-POSTA</label><input type="email" required placeholder="ornek@mail.com"></div></div>
+<div><label>İNGİLİZCE SEVİYEN</label><select><option>Emin değilim</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select></div>
+<div><label>NASIL YARDIMCI OLABİLİRİM?</label><textarea placeholder="Hedeflerinden, ihtiyaçlarından veya merak ettiklerinden bahset..."></textarea></div>
+<button class="btn primary" type="submit">MESAJ GÖNDER →</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><div><strong>STEP UP ENGLISH</strong> — İngilizceni geliştir, dünyanı değiştir.</div><div>© 2026 STEP UP ENGLISH</div></div></footer>
+
+<!-- AI yardımcı -->
+<button class="chat-toggle" id="chatToggle" aria-label="AI yardımcısını aç">
+<svg viewBox="0 0 24 24" fill="none"><path d="M5 6.5A3.5 3.5 0 0 1 8.5 3h7A3.5 3.5 0 0 1 19 6.5v6a3.5 3.5 0 0 1-3.5 3.5H11l-4.5 3v-3.4A3.5 3.5 0 0 1 5 12.5v-6Z" stroke="white" stroke-width="1.7"/><path d="M9 9h.01M12 9h.01M15 9h.01" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
+<div class="chat-box" id="chatBox">
+<div class="chat-head"><div><b>STEP UP AI</b><small>İngilizce yolculuğunda sana yardımcı olayım.</small></div><button class="chat-close" id="chatClose">×</button></div>
+<div class="chat-messages" id="chatMessages"><div class="bubble bot">Merhaba! 👋 Sana nasıl yardımcı olabilirim? Seviye testi, kişisel çalışma planı veya dersler hakkında bilgi verebilirim.</div></div>
+<div class="chat-input"><input id="chatInput" placeholder="Bir şey sor..."><button id="chatSend">→</button></div>
+</div>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+/* AI planlayıcı: şimdilik tarayıcı içinde çalışan kişiselleştirme motoru.
+   Gerçek bir LLM/API daha sonra bağlanabilir. */
+let current=1, selectedTopics=[], selectedSkills=[];
+const steps=[...document.querySelectorAll('.ai-step')], bar=document.getElementById('progressBar');
+function showStep(n){
+ current=n; steps.forEach(s=>s.classList.toggle('active',+s.dataset.step===n));
+ bar.style.width=(n===4?100:n*25)+'%';
+ document.getElementById('planner').scrollIntoView({behavior:'smooth',block:'center'});
+}
+document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>{
+ if(current===3){makePlan();showStep(4)} else showStep(current+1)
+}));
+document.querySelectorAll('.prev').forEach(b=>b.addEventListener('click',()=>showStep(current-1)));
+document.querySelectorAll('.chip').forEach(chip=>chip.addEventListener('click',()=>{
+ chip.classList.toggle('selected');
+ if(chip.classList.contains('skill')) selectedSkills=[...document.querySelectorAll('.skill.selected')].map(x=>x.textContent.trim());
+ else selectedTopics=[...document.querySelectorAll('.chip:not(.skill).selected')].map(x=>x.textContent.trim());
+}));
+
+function makePlan(){
+ const level=document.getElementById('level').value, time=document.getElementById('time').value;
+ const skill=selectedSkills[0]||'🗣️ Konuşma';
+ const topic=selectedTopics[0]||'🎬 Film & Dizi';
+ let weekly=time.includes('15')||time.includes('30')? '5 gün × 20–30 dk':time.includes('45')?'5 gün × 45 dk':time.includes('1 saat')?'5 gün × 60 dk':'6 gün × 60–90 dk';
+ let focus=skill.includes('Konuşma')?'Konuşma + kelime':skill.includes('Dinleme')?'Dinleme + kelime':skill.includes('Yazma')?'Yazma + dil bilgisi':skill.includes('Okuma')?'Okuma + kelime':skill.includes('Kelime')?'Kelime + konuşma':'Dil bilgisi + uygulama';
+ document.getElementById('result').innerHTML=`
+ <div class="plan-top"><div class="eyebrow" style="color:#8ea3ff">KİŞİSEL ÖNERİN HAZIR</div><h3>${level} seviyesine göre ilk rotan.</h3><p>${topic} ilgini ve ${skill.toLowerCase()} hedefini programına dahil ettik.</p></div>
+ <div class="plan-grid">
+ <div class="plan-card"><h4>📅 Haftalık Rutin</h4><p>${weekly}</p><ul><li>10 dk kelime</li><li>15–30 dk ${focus}</li><li>Haftada 1 konuşma pratiği</li></ul></div>
+ <div class="plan-card"><h4>🎯 Ana Hedef</h4><p>${focus} alanında düzenli ve ölçülebilir ilerleme.</p><ul><li>Her hafta mini tekrar</li><li>Gerçek hayat içeriği</li><li>Ay sonunda yeniden değerlendirme</li></ul></div>
+ <div class="plan-card"><h4>🌐 Kaynak Önerileri</h4><p>Başlangıç için güvenilir ve ücretsiz kaynaklar:</p><ul><li>BBC Learning English</li><li>British Council LearnEnglish</li><li>VOA Learning English</li></ul></div>
+ <div class="plan-card"><h4>🎨 İçerik fikri</h4><p>İlgi alanını İngilizceye dönüştür:</p><ul><li>${topic} hakkında haftada 1 video</li><li>5 yeni kelimeyi cümlede kullan</li><li>2–3 dk sesli anlatım kaydet</li></ul></div>
+ </div>
+ <div class="cta-after"><div><strong>Hazır mısın?</strong><p>Şimdi oluşturduğun planla birlikte Oktay ile iletişime geçebilirsin.</p></div><a class="btn" href="#contact">ÖĞRETMENLE İLETİŞİME GEÇ →</a></div>
+ `;
+}
+showStep(1);
+
+/* Basit site içi yardımcı. Gerçek AI bağlantısı için API/LLM entegrasyon noktası hazır. */
+const chatToggle=document.getElementById('chatToggle'),chatBox=document.getElementById('chatBox'),chatClose=document.getElementById('chatClose');
+chatToggle.onclick=()=>chatBox.classList.toggle('open');chatClose.onclick=()=>chatBox.classList.remove('open');
+function sendChat(){
+ const input=document.getElementById('chatInput'),msg=input.value.trim();if(!msg)return;
+ const area=document.getElementById('chatMessages');area.innerHTML+=`<div class="bubble user">${msg.replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]))}</div>`;
+ let reply='Bunun için önce kişisel planlayıcıyı kullanmanı öneririm. Seviyeni, hedefini ve günlük ayırabileceğin zamanı girersen sana uygun bir rota oluşturabiliriz.';
+ const q=msg.toLowerCase();
+ if(q.includes('seviye')) reply='Seviyeni öğrenmek için Prosedür bölümündeki seviye belirleme adımıyla başlayabilirsin. Ardından kişisel planlayıcı seni yönlendirecek.';
+ if(q.includes('ders')) reply='Özel dersler tamamen ihtiyaçlarına göre şekilleniyor. Önce planını oluşturup ardından Oktay ile iletişime geçebilirsin.';
+ if(q.includes('plan')) reply='Harika! Hemen aşağıdaki AI destekli kişisel planlayıcıya geçip seviyeni, hobilerini, çalışma süreni ve hedefini seçebilirsin.';
+ if(q.includes('ücretsiz')||q.includes('kaynak')) reply='Planında BBC Learning English, British Council LearnEnglish ve VOA Learning English gibi ücretsiz kaynakları önerebiliriz.';
+ setTimeout(()=>{area.innerHTML+=`<div class="bubble bot">${reply}</div>`;area.scrollTop=area.scrollHeight},250);
+ input.value='';area.scrollTop=area.scrollHeight;
+}
+document.getElementById('chatSend').onclick=sendChat;
+document.getElementById('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat()});
+</script>
+</body>
+</html>
